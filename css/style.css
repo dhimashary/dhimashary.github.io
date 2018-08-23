@@ -1,0 +1,140 @@
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+a {
+  color: white;
+  font-family: font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+}
+a:hover{
+   color: white;
+  font-family: font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+   font-weight: bold;
+}
+i{
+  font-size: 40px;
+}
+i:hover{
+  cursor: pointer;
+}
+.img-cont{
+  width: 75px;
+  height: 75px;
+}
+.img-cont:hover{
+cursor: pointer; 
+width: 85px;
+height: 85px; 
+}
+body{
+  position: relative;
+}
+.nav-style{
+
+  color: white;
+  font-family: font-family: 'Quicksand', sans-serif;
+}
+.nav-style:hover {
+  font-weight: bold;
+
+  cursor: pointer;
+}
+#navbar-example2{
+  position: fixed;
+  top: 0;
+}
+.card-img-top{
+  height: 180px;
+
+}
+.foot-text{
+  font-size: 15px;
+  
+}
+.jobtitle {
+  color: white;
+  font-family: font-family: 'Quicksand', sans-serif;
+}
+.card {
+  color: black;
+}
+.card-title{
+  font-size: 18px;
+  font-family: font-family: 'Quicksand', sans-serif;
+  color: #4EA8D8;
+}
+.card-text{
+  font-family: font-family: 'Quicksand', sans-serif;
+  color: #4EA8D8;
+}
+.maincontent {
+  background-color: #4EA8D8;
+}
+.bg-blue{
+  color: white;
+  background-color: #4EA8D8;
+}
+.bg-white{
+  font-size: 60px;
+  color: #4EA8D8;
+  background-color: #F9F9F9;
+}
+.about-text{
+  font-size: 22px;
+}
+@media screen and (max-width: 767px) {
+  .content-1 {
+  font-size: 30px;
+  background-color: #4EA8D8;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  }
+ .about-title{
+  font-size: 30px;
+ }
+  .about-text{
+  font-size: 14px;
+}
+  .nav-style{
+    font-size: 14px;
+  }
+  .img-cont{
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  .img-cont:hover{
+cursor: pointer; 
+width: 35px;
+height: 35px; 
+}
+}
+@media screen and (min-width: 768px) {
+  .content-1 {
+    font-size: 55px;
+  background-color: #4EA8D8;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  }
+  
+}
+@media screen and (min-width: 992px) {
+  .content-1 {
+    font-size: 80px;
+    background-color: #4EA8D8;
+	color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  }
+  .jobtitle{
+    font-size: 35px;
+  }
+  .nav-style{
+    font-size: 20px;
+  }
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+
+
