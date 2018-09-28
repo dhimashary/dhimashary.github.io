@@ -1,0 +1,18 @@
+#title {
+    background-color:#3498db;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 36px;
+}
+.progress{
+    height: 20px;
+}
+.card{
+    width: 100%;
+}
+.card-img-top{
+    height:30%;
+}
+.btn{
+    width : 100%;
+}

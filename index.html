@@ -1,95 +1,96 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-  	<link rel="stylesheet" type="text/css" href="css/style.css">
-  	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand" rel="stylesheet"> 
-  	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<title>Hary Dhimas Prakoso</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>RobotVSPirates</title>
 </head>
+
 <body>
-		<div class="d-flex p-2 flex-row-reverse bg-blue pb-lg-5 pb-sm-0	 pb-md-4 ">
-			<ul class="list-inline" id="navbar-example2">
-				<li class="list-inline-item nav-style mr-0 "><a href="#About">About Me</a></li>
-				<li class="list-inline-item nav-style pr-2 pl-0 ml-2 pt-2"><a href="#Experience">Experince</a></li>
-			</ul>
-		</div>
-		<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-		<div class="pb-4 bg-blue pt-4" id="Main" ></div>
-		<div class=" bg-blue pt-5">
-			<div class="col-12 content-1 text-center animated bounce delay-4s pt-lg-5 pt-sm-2"><strong>Hai ! I'm Hary Dhimas </strong></div>
-			<div class="col-12 jobtitle text-center">Teacher | Web Programmer | Movie Enthusiast</div>
-		</div>
-		<div class="d-flex justify-content-center bg-blue pt-4 pb-5">
-			<a href="https://github.com/dhimashary" data-toggle="tooltip" title="github.com/dhimashary" data-placement="bottom"><img src="img/github.png"  id="github" alt="githubico" class="img-fluid img-cont mr-lg-5 ml-lg-2 mb-lg-5 mr-sm-2"></a>
-			<a href="https://linkedin.com/in/harydhimasprakoso" data-toggle="tooltip" title="linkedin.com/in/harydhimasprakoso" data-placement="bottom"><img src="img/linkedin.png"  id="linkedin" alt="githubico" class="img-fluid img-cont mr-lg-5 mb-lg-5 mr-sm-2"></a>
-			<img src="img/Contact.png" data-toggle="tooltip" title="dhimas.hary@gmail.com" data-placement="bottom" id="contact" alt="contact" class="img-fluid img-cont">
+    <div class="col-lg-12 d-flex justify-content-center pt-2 pb-2 bg-primary" id="title">
+        Robot Versus Pirates
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-5 bg-warning pt-4 rounded" id="player-0">
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" id="player-0-bar">100</div>
+                </div>
+                <div class="card text-white bg-primary mb-3" >
+                    <div class="card-header"><center><h3 id="name-0">Robots</h3></center></div>
+                    <img class="card-img-top" src="robot.png" alt="Card image cap" class="img-fluid" id='player-0-img'>
+                    <div class="card-body">
+                      <h5 class="card-title">STATUS</h5>
+                      <p class="card-text">Current Attack : <span id="attack-0">0</span></p> 
+                      <p class="card-text">Current Health : <span id="health-0">0</span></p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-outline-success mb-2" id="btn-new">New Game</button>
+                    
+                    <div class="col-lg-12">
+                        <img src="dice-6.png" class="border border-danger rounded img-fluid mb-5 mt-5" alt="dice" id="dice">
+                    </div>
+                    <button type="button" class="btn btn-outline-danger mb-2" id="btn-roll">Roll Dice</button>
+                    
+                    <button type="button" class="btn btn-outline-danger  mb-2" id="btn-attack">Attack</button>
+                    
+                    <button type="button" class="btn btn-outline-primary  mb-2" data-toggle="modal" data-target="#instruction">Instruction</button>
+                                        
+                      <!-- Modal -->
+                      <div class="modal fade" id="instruction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Instruksi Permainan</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <p>1. Selamat datang di permainan robot vs pirates</p>
+                              <p>2. Game ini merupakan pengembangan dari algoritma permainan DICE PIG GAME. <a href="https://en.wikipedia.org/wiki/Pig_(dice_game)">Pig Dice Game</a></p>
+                              <p>3. Permainan ini dimainkan oleh 2 player , player 1 adalah robot, dan player 2 pirates</p>
+                              <p>4. Permainan dimulai dari giliran robot</p>
+                              <p>5. Player dapat mengclick roll-dice tanpa ada batasan berapa kali click, dan jumlah dadu akan diakumulasi menjadi nilai serangan dengan click button attack</p>
+                              <p>6. Namun , berhati-hatilah dalam klik roll dice karena jika anda mendapat angka 1, serangan anda akan dibatalkan dan akan menjadi giliran player berikutnya</p>
+                              <p>7. Player yang dapat membuat health bar musuh menjadi 0 pertama kali yang akan menjadi pemenangnya</p>
 
-		</div>
-		<div class="d-flex justify-content-center bg-blue pt-5 pb-4">
-			<a href="#About">
-					<i class="fas fa-angle-double-down animated bounce delay-5s infinite"></i></a>
-			
-		</div>
-		<div class="container pb-5 mb-5">
-		<div class=" bg-white pt-5">
-			<div class="col-12 pt-lg-5 pt-sm-2 pl-0 about-title" id="About"><strong>About Me</strong></div>
-			<div class="row pb-5">
-				<div class="col-lg-8 about-text text-justify"><p>My name is Hary Dhimas Prakoso. I graduated from <strong>Universitas Negeri Jakarta (UNJ)</strong> in January 2016. </p><p>I used to work at <strong>Robota Robotics School</strong>, and <strong> PRESTASI PRIMA vocational highschool</strong> as a teacher. I love both teaching and programming.</p> <p>I make this website with bootstrap and jquery, you can see my other works on my github profile , that site was made with jquery, bootstrap, and my own custom MVC framework. </p> </div>
-				<div class="col-lg-4">
-					<img src="img/hary.jpeg"  alt="githubico" class="img-fluid rounded">
-				</div>
-			</div>
-		</div>
-		</div>
-		
-		<div class="d-flex justify-content-center bg-blue pt-5 pb-5">
-			<a href="#Experience">
-					<i class="fas fa-angle-double-down animated bounce delay-5s infinite"></i>
-			</a>
-		
-		</div>
-		<div class="bg-blue pt-5">
-			<div class="container pb-5 mb-5">
-			<div class="row justify-content-center pb-5">
-				<div class="col-10  content-1  pt-sm-2" id="Experience"><strong>My Experience </strong></div>
-				<div class="card col-lg-3 mr-2 mb-2 ml-2 p-0" >
-				  <img class="card-img-top" src="img/PKM.jpg" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title"><strong>Internship at SMKN 40 JAKARTA TIMUR (2014)</strong></h5>
-				    <p class="card-text">Web Design Teacher  at SMKN 40 Jakarta Timur </p>
-				  </div>
-				</div>
-				<div class="card col-lg-3 mr-2 mb-2 ml-2 p-0" >
-				  <img class="card-img-top" src="img/robota.jpeg" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title"><strong>Instructor at Robota Robotics School (2016-2017)</strong></h5>
-				    <p class="card-text">Robotics Teacher (Arduino, C++, and Robokids) for children with age range 5-12 years old </p>
-				  </div>
-				</div>
-				<div class="card col-lg-3 mr-2 mb-2 p-0 ml-2" >
-				  <img class="card-img-top" src="img/SMKPP.jpeg" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title"><strong>Teacher at SMK PRESTASI PRIMA (2017-2018)</strong></h5>
-				    <p class="card-text">Web Programming Teacher (HTML, CSS, and PHP) at SMK PRESTASI PRIMA </p>
-				  </div>
-				</div>
-			</div>
-		</div>
-		</div>
-		
-		</div>
-		<p class="foot-text text-center">2018 Copyright harydhimas</p>
-		
-		
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-		
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+            </div>
+            <div class="col-lg-5 pt-4 rounded" id="player-1">
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" id="player-1-bar">1a00</div>
+                </div>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header"><center><h3 id="name-1">Pirates</h3></center></div>
+                    <img class="card-img-top" src="pirates.png" alt="Card image cap" class="img-fluid" id='player-1-img'>
+                    <div class="card-body">
+                      <h5 class="card-title">STATUS</h5>
+                      <p class="card-text">Current Attack : <span id="attack-1">0</span></p> 
+                      <p class="card-text">Current Health : <span id="health-1">0</span></p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 </html>
